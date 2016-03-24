@@ -1,0 +1,8 @@
+first list contents ram
+second line contents uday
+third line contents roja
+fourth line contents divya
+fifth line contents Naresh
+sixth line contents Bujji
+seventh line contents Ram
+
