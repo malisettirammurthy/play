@@ -1,0 +1,66 @@
+SVSA            Physloc                                                          Client Partition ID
+--------------- -------------------------------------------- ------------------
+vhost16         U8205.E6D.21F93DV-V1-C217                    0x00000013
+ 
+VTD                   server1_rvg
+Status                Available
+LUN                   0x8100000000000000
+Backing device        hdisk10
+Physloc              
+Mirrored              N/A
+ 
+SVSA            Physloc                                                          Client Partition ID
+--------------- -------------------------------------------- ------------------
+vhost17         U8205.E6D.21F93DV-V1-C218                    0x00000013
+ 
+VTD                   server1_dvg1
+Status                Available
+LUN                   0x8100000000000000
+Backing device       hdisk11
+Physloc              
+Mirrored              N/A
+ 
+VTD                   server1_dvg2
+Status                Available
+LUN                   0x8100000000000000
+Backing device        hdisk12
+Physloc              
+Mirrored              N/A
+ 
+VTD                   server1_dvg3
+Status                Available
+LUN                   0x8100000000000000
+Backing device        hdisk16
+Physloc              
+Mirrored              N/A
+ 
+ 
+SVSA            Physloc                                                          Client Partition ID
+--------------- -------------------------------------------- ------------------
+vhost18         U8205.E6D.21F93DV-V1-C220                    0x00000014
+ 
+VTD                   server2_rvg
+Status                Available
+LUN                   0x8100000000000000
+Backing device        hdisk13
+Physloc              
+Mirrored              N/A
+ 
+ 
+SVSA                     Physloc                                                                Client Partition ID
+--------------- -------------------------------------------- ------------------
+vhost19                U8205.E6D.21F93DV-V1-C220                    0x00000014
+ 
+VTD                        server2_dvg1
+Status                   Available
+LUN                       0x8100000000000000
+Backing device       hdisk14
+Physloc               
+Mirrored              N/A
+ 
+VTD                   server2_dvg2
+Status                Available
+LUN                   0x8100000000000000
+Backing device       hdisk15
+Physloc              
+Mirrored              N/A

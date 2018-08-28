@@ -1,0 +1,29 @@
+#pseudo code:
+
+#Daily:
+1. Get last saved log file from location /nmon-data/daily using -
+    fname=`ls -ltr /nmon-data/daily |awk 'NF>2 {print $NF}' | head -1`
+
+Get the counter value from $fname-
+    cnum=`echo $fname | awk -F_ '{print $NF}' | awk -F. '{print $1}'`
+
+Last saved file epoch time-
+    lsaved=`date +%s -r $fname`
+
+Present epoch time-
+    ptime=`date +%s`
+
+cnum_resp_to_time=$cnum + ${$ptime - $lsaved / 180} //Every 3  minutes counter runs
+cnum_resp_to_time=$cnum + ${$ptime - $lsaved / 900} //Every 15  minutes counter runs
+cnum_resp_to_time=$cnum + ${$ptime - $lsaved / 2700} //Every 45  minutes counter runs
+
+remaining_c=${480-cnum_resp_to_time} //Every 3  minutes counter runs
+remaining_c=${672-cnum_resp_to_time} //Every 15  minutes counter runs
+remaining_c=${992-cnum_resp_to_time} //Every 45  minutes counter runs
+
+Add below entry for daily cron entry:
+1 0 * * * /usr/bin/nmon -s 180 -c $remaining_c -m /nmon-data/daily  //Every 3  minutes counter runs
+1 0 * * * /usr/bin/nmon -s 900 -c $remaining_c -m /nmon-data/weekly  //Every 15  minutes counter runs
+1 0 * * * /usr/bin/nmon -s 2700 -c $remaining_c -m /nmon-data/monthly  //Every 45  minutes counter runs
+
+
